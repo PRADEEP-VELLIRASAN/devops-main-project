@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelEase - Premium Bus Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="loader">
+        <div class="bus-loader">
+            <div class="bus-body"></div>
+            <div class="bus-wheel wheel1"></div>
+            <div class="bus-wheel wheel2"></div>
+        </div>
+        <p>Loading your journey...</p>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span>Travel</span>Ease
+                <div class="logo-icon"><i class="fas fa-bus-alt"></i></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Routes</a></li>
+                    <li><a href="#">Offers</a></li>
+                    <li><a href="#">My Bookings</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-buttons">
+                <button class="btn btn-outline">Login</button>
+                <button class="btn btn-primary">Sign Up</button>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="animate-text">Explore India with Comfort & Style</h1>
+                <p class="animate-text delay-1">Book premium bus tickets to your favorite destinations across India</p>
+                <div class="booking-card animate-up delay-2">
+                    <div class="booking-tabs">
+                        <button class="tab-btn active">One Way</button>
+                        <button class="tab-btn">Round Trip</button>
+                    </div>
+                    <div class="booking-form">
+                        <div class="form-group">
+                            <label><i class="fas fa-map-marker-alt"></i> From</label>
+                            <select id="from-location">
+                                <option value="">Select Departure City</option>
+                                <option value="delhi">Delhi</option>
+                                <option value="mumbai">Mumbai</option>
+                                <option value="bangalore">Bangalore</option>
+                                <option value="chennai">Chennai</option>
+                                <option value="kolkata">Kolkata</option>
+                                <option value="hyderabad">Hyderabad</option>
+                                <option value="jaipur">Jaipur</option>
+                            </select>
+                        </div>
+                        <div class="swap-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-map-marker-alt"></i> To</label>
+                            <select id="to-location">
+                                <option value="">Select Destination City</option>
+                                <option value="agra">Agra</option>
+                                <option value="pune">Pune</option>
+                                <option value="mysore">Mysore</option>
+                                <option value="pondicherry">Pondicherry</option>
+                                <option value="darjeeling">Darjeeling</option>
+                                <option value="tirupati">Tirupati</option>
+                                <option value="udaipur">Udaipur</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-calendar-alt"></i> Departure</label>
+                            <input type="date" id="departure-date">
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-user-friends"></i> Passengers</label>
+                            <select id="passengers">
+                                <option value="1">1 Passenger</option>
+                                <option value="2">2 Passengers</option>
+                                <option value="3">3 Passengers</option>
+                                <option value="4">4 Passengers</option>
+                                <option value="5">5+ Passengers</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-search">
+                            <i class="fas fa-search"></i> Search Buses
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image animate-right delay-3">
+                <img src="https://placeholder.pics/svg/500x300/DEDEDE/555555/Premium%20Bus" alt="Luxury Bus">
+                <div class="floating-badge">
+                    <span>20% OFF</span>
+                    <small>on first booking</small>
+                </div>
+            </div>
+        </div>
+        <div class="wave-divider">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="popular-routes">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular Routes Across India</h2>
+                <p>Discover the most traveled bus routes with premium comfort</p>
+            </div>
+            <div class="routes-container">
+                <div class="route-card" data-aos="fade-up">
+                    <div class="route-image">
+                        <img src="https://placeholder.pics/svg/300x200/DEDEDE/555555/Delhi-Agra" alt="Delhi to Agra">
+                        <div class="route-overlay">
+                            <span class="duration"><i class="fas fa-clock"></i> 4 hrs</span>
+                        </div>
+                    </div>
+                    <div class="route-details">
+                        <div class="route-cities">
+                            <h3>Delhi <i class="fas fa-arrow-right"></i> Agra</h3>
+                            <p>Visit the magnificent Taj Mahal</p>
+                        </div>
+                        <div class="route-info">
+                            <div class="route-price">
+                                <span class="price">₹800</span>
+                                <span class="price-old">₹950</span>
+                            </div>
+                            <button class="btn btn-sm">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="route-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="route-image">
+                        <img src="https://placeholder.pics/svg/300x200/DEDEDE/555555/Mumbai-Pune" alt="Mumbai to Pune">
+                        <div class="route-overlay">
+                            <span class="duration"><i class="fas fa-clock"></i> 3 hrs</span>
+                        </div>
+                    </div>
+                    <div class="route-details">
+                        <div class="route-cities">
+                            <h3>Mumbai <i class="fas fa-arrow-right"></i> Pune</h3>
+                            <p>Weekend getaway to the cultural hub</p>
+                        </div>
+                        <div class="route-info">
+                            <div class="route-price">
+                                <span class="price">₹450</span>
+                                <span class="price-old">₹550</span>
+                            </div>
+                            <button class="btn btn-sm">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="route-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="route-image">
+                        <img src="https://placeholder.pics/svg/300x200/DEDEDE/555555/Bangalore-Mysore" alt="Bangalore to Mysore">
+                        <div class="route-overlay">
+                            <span class="duration"><i class="fas fa-clock"></i> 3.5 hrs</span>
+                        </div>
+                    </div>
+                    <div class="route-details">
+                        <div class="route-cities">
+                            <h3>Bangalore <i class="fas fa-arrow-right"></i> Mysore</h3>
+                            <p>Explore the majestic Mysore Palace</p>
+                        </div>
+                        <div class="route-info">
+                            <div class="route-price">
+                                <span class="price">₹350</span>
+                                <span class="price-old">₹450</span>
+                            </div>
+                            <button class="btn btn-sm">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="route-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="route-image">
+                        <img src="https://placeholder.pics/svg/300x200/DEDEDE/555555/Chennai-Pondicherry" alt="Chennai to Pondicherry">
+                        <div class="route-overlay">
+                            <span class="duration"><i class="fas fa-clock"></i> 3 hrs</span>
+                        </div>
+                    </div>
+                    <div class="route-details">
+                        <div class="route-cities">
+                            <h3>Chennai <i class="fas fa-arrow-right"></i> Pondicherry</h3>
+                            <p>Relax at the serene beaches</p>
+                        </div>
+                        <div class="route-info">
+                            <div class="route-price">
+                                <span class="price">₹500</span>
+                                <span class="price-old">₹650</span>
+                            </div>
+                            <button class="btn btn-sm">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more">
+                <button class="btn btn-outline-primary">View All Routes <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose TravelEase?</h2>
+                <p>Experience the best bus booking service in India</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="zoom-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h3>Premium Buses</h3>
+                    <p>Travel in luxury with our premium fleet of buses equipped with modern amenities</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Extensive Routes</h3>
+                    <p>Connect to over 5000+ destinations across India with daily departures</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>Best Prices</h3>
+                    <p>Get the best deals and discounts on bus tickets with our price guarantee</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our customer support team is available round the clock to assist you</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-download">
+        <div class="container">
+            <div class="app-content">
+                <div class="app-text" data-aos="fade-right">
+                    <h2>Download Our Mobile App</h2>
+                    <p>Book tickets, manage bookings, and get exclusive offers on the go!</p>
+                    <div class="app-buttons">
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-google-play"></i>
+                            <span>
+                                <small>GET IT ON</small>
+                                Google Play
+                            </span>
+                        </a>
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-apple"></i>
+                            <span>
+                                <small>DOWNLOAD ON</small>
+                                App Store
+                            </span>
+                        </a>
+                    </div>
+                    <div class="app-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span>4.8/5 from 10,000+ reviews</span>
+                    </div>
+                </div>
+                <div class="app-image" data-aos="fade-left">
+                    <img src="https://placeholder.pics/svg/300x600/DEDEDE/555555/Mobile%20App" alt="TravelEase Mobile App">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Travelers Say</h2>
+                <p>Hear from our satisfied customers across India</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>The journey from Delhi to Jaipur was incredibly comfortable. The bus was clean, the staff was courteous, and we reached on time. Will definitely book again!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://placeholder.pics/svg/60x60/DEDEDE/555555/User" alt="Priya Sharma">
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>I frequently travel between Mumbai and Pune for work. TravelEase has made my commute so much easier with their reliable service and comfortable buses. Highly recommended!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://placeholder.pics/svg/60x60/DEDEDE/555555/User" alt="Rahul Mehta">
+                        </div>
+                        <div class="author-info">
+                            <h4>Rahul Mehta</h4>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>The overnight bus from Bangalore to Coorg was amazing! The sleeper seats were comfortable, and I could rest well. The booking process was also very smooth and user-friendly.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://placeholder.pics/svg/60x60/DEDEDE/555555/User" alt="Ananya Reddy">
+                        </div>
+                        <div class="author-info">
+                            <h4>Ananya Reddy</h4>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="offers">
+        <div class="container">
+            <div class="section-header">
+                <h2>Special Offers & Deals</h2>
+                <p>Grab these limited-time offers for your next journey</p>
+            </div>
+            <div class="offers-grid">
+                <div class="offer-card" data-aos="flip-left">
+                    <div class="offer-tag">FESTIVE OFFER</div>
+                    <h3>Diwali Special</h3>
+                    <p>Get flat 25% off on all routes during the Diwali festival week</p>
+                    <div class="offer-code">
+                        <span>Use Code: </span>
+                        <strong>DIWALI25</strong>
+                    </div>
+                    <button class="btn btn-outline">Book Now</button>
+                </div>
+
+                <div class="offer-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="offer-tag">WEEKEND SPECIAL</div>
+                    <h3>Weekend Getaway</h3>
+                    <p>15% off on all weekend trips to popular tourist destinations</p>
+                    <div class="offer-code">
+                        <span>Use Code: </span>
+                        <strong>WEEKEND15</strong>
+                    </div>
+                    <button class="btn btn-outline">Book Now</button>
+                </div>
+
+                <div class="offer-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="offer-tag">NEW USER</div>
+                    <h3>First Journey</h3>
+                    <p>First-time users get ₹200 off on their first booking</p>
+                    <div class="offer-code">
+                        <span>Use Code: </span>
+                        <strong>FIRST200</strong>
+                    </div>
+                    <button class="btn btn-outline">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Subscribe to Our Newsletter</h2>
+                    <p>Get the latest offers, travel tips, and updates directly in your inbox</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <span>Travel</span>Ease
+                    </div>
+                    <p>India's most trusted bus booking platform with 10+ years of experience and millions of happy travelers.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Popular Routes</h3>
+                    <ul>
+                        <li><a href="#">Delhi to Manali</a></li>
+                        <li><a href="#">Mumbai to Goa</a></li>
+                        <li><a href="#">Bangalore to Ooty</a></li>
+                        <li><a href="#">Chennai to Kodaikanal</a></li>
+                        <li><a href="#">Kolkata to Digha</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Cyber City, Gurugram, India</li>
+                        <li><i class="fas fa-phone-alt"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> support@travelease.in</li>
+                    </ul>
+                    <div class="payment-methods">
+                        <span>We Accept:</span>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-google-pay"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 TravelEase. All Rights Reserved.</p>
+                <div class="app-download-mini">
+                    <span>Get our app:</span>
+                    <a href="#"><i class="fab fa-android"></i></a>
+                    <a href="#"><i class="fab fa-apple"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Loader Animation
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.loader').style.opacity = '0';
+                setTimeout(function() {
+                    document.querySelector('.loader').style.display = 'none';
+                }, 500);
+            }, 1500);
+        });
+
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        // Swap Origin and Destination
+        document.querySelector('.swap-icon').addEventListener('click', function() {
+            const fromSelect = document.getElementById('from-location');
+            const toSelect = document.getElementById('to-location');
+            const tempValue = fromSelect.value;
+            fromSelect.value = toSelect.value;
+            toSelect.value = tempValue;
+            
+            this.classList.add('rotate');
+            setTimeout(() => {
+                this.classList.remove('rotate');
+            }, 500);
+        });
+
+        // Testimonial Slider
+        const dots = document.querySelectorAll('.testimonial-dots .dot');
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                document.querySelector('.testimonial-dots .dot.active').classList.remove('active');
+                dot.classList.add('active');
+                
+                const slider = document.querySelector('.testimonial-slider');
+                slider.style.transform = `translateX(-${index * 33.33}%)`;
+            });
+        });
+
+        // Animation on Scroll (Simple Implementation)
+        const animateElements = document.querySelectorAll('[data-aos]');
+        
+        function checkScroll() {
+            animateElements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementPosition < windowHeight * 0.85) {
+                    element.classList.add('aos-animate');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+    </script>
+</body>
+</html>
